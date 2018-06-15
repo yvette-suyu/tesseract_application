@@ -1,8 +1,8 @@
-###
+'''
 @author:yvette_suyu
 2018.5.8
 for data-processing
-###
+'''
 
 #encoding=utf-8
 from __future__ import print_function
@@ -51,7 +51,7 @@ class xmlDataset(object):
 
                     for size in root.findall('size'):
                         # print ('size is',size)
-                        sizeh = int(size.find('height').text)
+                        sizeh = int(size.find('h###eight').text)
 
                         # print('size is',sizeh)
 
@@ -85,7 +85,7 @@ class xmlDataset(object):
                         xmax = max(point0_list[0],point1_list[0],point2_list[0],point3_list[0])
                         ymax = max(point0_list[1],point1_list[1],point2_list[1],point3_list[1])
 
-                        # delta = ((float(point2_list[0]) - float(point0_list[0])) + 0.01) / dis * 1.0
+                        # delta = ((float(point2_list[0]) - float(point0_list[0])) + 0###.01) / dis * 1.0
                         delta = (xmax-xmin)/dis
                         if abs(delta) < 0.00001:
                             logging.warning("invalid delta ")
